@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppWidgetConfigure" >
+
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+	    android:paddingRight="16dp"
+	    android:paddingTop="16dp">
+
+        <EditText
+	        android:id="@+id/url"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="5dp"
+	        android:hint="@string/url"
+	        android:inputType="textUri" >
+	        <requestFocus />
+	    </EditText>
+
+	    <EditText
+	        android:id="@+id/abbreviation"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/url"
+	        android:hint="@string/abbreviation"
+	        android:inputType="text|textNoSuggestions" />
+	
+	    <TextView
+	        android:id="@+id/hue_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginBottom="5dp"
+	        android:layout_below="@+id/abbreviation"
+	        android:text="@string/hue"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	    
+	    <SeekBar
+	        android:id="@+id/hue_seek_bar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/hue_text" />
+	    
+	    <TextView
+	        android:id="@+id/saturation_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginBottom="5dp"
+	        android:layout_below="@+id/hue_seek_bar"
+	        android:text="@string/saturation"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	    
+	    <SeekBar
+	        android:id="@+id/saturation_seek_bar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/saturation_text" />
+	    
+	    <TextView
+	        android:id="@+id/lightness_text"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginBottom="5dp"
+	        android:layout_below="@+id/saturation_seek_bar"
+	        android:text="@string/lightness"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	    
+	    <SeekBar
+	        android:id="@+id/lightness_seek_bar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/lightness_text" />
+    </RelativeLayout>
+    
+   	<LinearLayout
+   	    android:id="@+id/actionButtons"
+   	    android:layout_width="fill_parent"
+   	    android:layout_height="wrap_content"
+   	    android:layout_alignParentBottom="true"
+   	    android:layout_gravity="center_horizontal">
+        
+   	    <Button
+	        android:id="@+id/cancel"
+	        style="?android:attr/borderlessButtonStyle"
+	        android:layout_weight="1"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/cancel" />
+   	    
+   	    <View
+            android:id="@+id/buttonVerticalSeparator"
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="4dip"
+            android:layout_marginTop="4dip"
+            android:background="?android:attr/dividerVertical" />
+   	    
+   	    <Button
+	        android:id="@+id/done"
+	        style="?android:attr/borderlessButtonStyle"
+	        android:layout_weight="1"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/done" />
+   	</LinearLayout>
+
+</RelativeLayout>
